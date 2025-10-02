@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การอบรมเชิงปฏิบัติการ: Machine Learning และการประเมินโมเดล</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon"></div>
+                <h1>การอบรมเชิงปฏิบัติการ</h1>
+                <h2>Machine Learning และการประเมินโมเดล</h2>
+                <p class="hero-subtitle">กิจกรรมที่ 1: Machine Learning and Model Evaluation with Teachable Machine and Google Sheets</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#event-info">ข้อมูลการจัดอบรม</a></li>
+                <li><a href="#agenda">สาระสำคัญ</a></li>
+                <li><a href="#ml-basics">Machine Learning เบื้องต้น</a></li>
+                <li><a href="#teachable-machine">Teachable Machine</a></li>
+                <li><a href="#evaluation">การประเมินโมเดล</a></li>
+                <li><a href="#downloads">ดาวน์โหลด</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="event-info" class="section event-info">
+            <div class="container">
+                <h2>📅 ข้อมูลการจัดอบรม</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>โครงการ</h3>
+                        <p>วิทยาศาสตร์พลังสิบ ระดับชั้นมัธยมศึกษาตอนปลาย</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>วัน/เวลา</h3>
+                        <p>วันพฤหัสบดี ที่ 2 ตุลาคม 2568<br>เวลา 13.00 - 16.30 น.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>สถานที่</h3>
+                        <p>ระบบออนไลน์ (Zoom meeting)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agenda" class="section agenda">
+            <div class="container">
+                <h2>🎯 สาระสำคัญ (Agenda)</h2>
+                <p class="section-intro">กิจกรรมนี้มุ่งเน้นการสร้างและประเมินประสิทธิภาพของโมเดล Machine Learning อย่างง่าย โดยเน้นการลงมือปฏิบัติจริง (Hands-on)</p>
+                
+                <div class="agenda-list">
+                    <div class="agenda-item">
+                        <div class="agenda-number">1</div>
+                        <div class="agenda-content">
+                            <h3>แนะนำการเรียนรู้ของเครื่อง (Machine Learning)</h3>
+                        </div>
+                    </div>
+                    <div class="agenda-item">
+                        <div class="agenda-number">2</div>
+                        <div class="agenda-content">
+                            <h3>แนะนำ Teachable Machine (เครื่องมือสร้างโมเดลแบบไม่ต้องเขียนโค้ด)</h3>
+                        </div>
+                    </div>
+                    <div class="agenda-item">
+                        <div class="agenda-number">3</div>
+                        <div class="agenda-content">
+                            <h3>กิจกรรม Hands-on I: การสร้างโมเดลด้วย Teachable Machine</h3>
+                        </div>
+                    </div>
+                    <div class="agenda-item">
+                        <div class="agenda-number">4</div>
+                        <div class="agenda-content">
+                            <h3>การประเมินประสิทธิภาพของโมเดลด้วย Confusion Matrix</h3>
+                        </div>
+                    </div>
+                    <div class="agenda-item">
+                        <div class="agenda-number">5</div>
+                        <div class="agenda-content">
+                            <h3>กิจกรรม Hands-on II: การวิเคราะห์ Confusion Matrix ใน Google Sheets</h3>
+                        </div>
+                    </div>
+                    <div class="agenda-item">
+                        <div class="agenda-number">6</div>
+                        <div class="agenda-content">
+                            <h3>ถามตอบและอภิปราย</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ml-basics" class="section ml-basics">
+            <div class="container">
+                <h2>1. ความรู้เบื้องต้นเกี่ยวกับ Machine Learning (ML)</h2>
+                
+                <div class="concept-card">
+                    <h3>Machine Learning คืออะไร?</h3>
+                    <p>Machine Learning (ML) คือสาขาหนึ่งของ ปัญญาประดิษฐ์ (AI) ที่ช่วยให้คอมพิวเตอร์สามารถเรียนรู้จากข้อมูลและปรับปรุงการทำงานของตนเองได้ โดยไม่ต้องมีการโปรแกรมที่เจาะจงทุกขั้นตอน</p>
+                </div>
+
+                <div class="comparison">
+                    <div class="comparison-item">
+                        <h4>Traditional Programming</h4>
+                        <p><strong>Input:</strong> Program + Data</p>
+                        <p><strong>Output:</strong> Result</p>
+                    </div>
+                    <div class="comparison-arrow">→</div>
+                    <div class="comparison-item">
+                        <h4>Machine Learning</h4>
+                        <p><strong>Input:</strong> Data + Output</p>
+                        <p><strong>Output:</strong> Program (Model)</p>
+                    </div>
+                </div>
+
+                <div class="applications">
+                    <h3>การประยุกต์ใช้ในชีวิตจริง</h3>
+                    <div class="app-grid">
+                        <div class="app-item">
+                            <h4>Recommendation Systems</h4>
+                            <p>(Netflix, YouTube, Shopee)</p>
+                        </div>
+                        <div class="app-item">
+                            <h4>Voice Assistants</h4>
+                            <p>(Siri, Google Assistant)</p>
+                        </div>
+                        <div class="app-item">
+                            <h4>Generative AI</h4>
+                            <p>(ChatGPT, DALL-E2, Midjourney)</p>
+                        </div>
+                        <div class="app-item">
+                            <h4>ระบบนำทาง</h4>
+                            <p>(Maps, Self-driving cars)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ml-types">
+                    <h3>ประเภทของ Machine Learning</h3>
+                    <div class="type-grid">
+                        <div class="type-card">
+                            <h4>Supervised Learning</h4>
+                            <p>เรียนรู้จากข้อมูลที่มีป้ายกำกับ (Labeled Data) เช่น การจำแนกประเภท (Classification) หรือการทำนายค่า (Regression)</p>
+                        </div>
+                        <div class="type-card">
+                            <h4>Unsupervised Learning</h4>
+                            <p>ค้นหารูปแบบในข้อมูลที่ไม่มีป้ายกำกับ (Unlabeled Data) เช่น การจัดกลุ่ม (Clustering)</p>
+                        </div>
+                        <div class="type-card">
+                            <h4>Reinforcement Learning</h4>
+                            <p>การเรียนรู้จากการกระทำและผลตอบรับ (Reward) เช่น AlphaGo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teachable-machine" class="section teachable-machine">
+            <div class="container">
+                <h2>2. เครื่องมือ: Teachable Machine (Hands-on I)</h2>
+                <p class="section-intro">Teachable Machine เป็นเครื่องมือที่ง่ายต่อการใช้งานจาก Google ที่ช่วยให้คุณสามารถสร้างโมเดล ML (ภาพ, เสียง, ท่าทาง) ได้ โดยไม่จำเป็นต้องมีทักษะในการเขียนโค้ด</p>
+                
+                <div class="steps">
+                    <h3>ขั้นตอนการสร้างโมเดล</h3>
+                    <div class="step-grid">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <h4>Gather</h4>
+                            <p>รวบรวมตัวอย่างข้อมูล (เช่น รูปผักและผลไม้) และจัดกลุ่มเป็นคลาส</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <h4>Train Model</h4>
+                            <p>ฝึกสอนโมเดล (สามารถปรับค่า Epochs, Batch Size, Learning Rate ในโหมด Advanced ได้)</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <h4>Export</h4>
+                            <p>ส่งออกโมเดลในรูปแบบที่ต้องการ เช่น TensorFlow.js เพื่อนำไปใช้ในเว็บไซต์</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="evaluation" class="section evaluation">
+            <div class="container">
+                <h2>3. การประเมินประสิทธิภาพของโมเดล</h2>
+                
+                <div class="concept-card">
+                    <h3>Confusion Matrix คืออะไร?</h3>
+                    <p>Confusion Matrix เป็นตารางที่ใช้ประเมินประสิทธิภาพของโมเดลการจำแนกประเภท (Classification) โดยแสดงผลการทำนายเทียบกับผลลัพธ์จริง</p>
+                </div>
+
+                <div class="confusion-matrix">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Predicted Positive</th>
+                                <th>Predicted Negative</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Actual Positive</strong></td>
+                                <td class="tp">True Positive (TP)<br><small>ทำนายถูกว่าใช่</small></td>
+                                <td class="fn">False Negative (FN)<br><small>ทำนายผิดว่าไม่ใช่ (ความจริงคือใช่)</small></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Actual Negative</strong></td>
+                                <td class="fp">False Positive (FP)<br><small>ทำนายผิดว่าใช่ (ความจริงคือไม่ใช่)</small></td>
+                                <td class="tn">True Negative (TN)<br><small>ทำนายถูกว่าไม่ใช่</small></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="metrics">
+                    <h3>ตัวชี้วัดประสิทธิภาพ (Model Performance Metrics)</h3>
+                    <div class="metrics-table">
+                        <div class="metric-item">
+                            <h4>Accuracy</h4>
+                            <p>วัดความถูกต้องโดยรวมของการทำนายทั้งหมด</p>
+                            <div class="formula">Accuracy = (TP + TN) / (TP + TN + FP + FN)</div>
+                        </div>
+                        <div class="metric-item">
+                            <h4>Precision</h4>
+                            <p>วัดความแม่นยำในการทำนายเป็น Positive</p>
+                            <div class="formula">Precision = TP / (TP + FP)</div>
+                        </div>
+                        <div class="metric-item">
+                            <h4>Recall</h4>
+                            <p>วัดความสามารถของโมเดลในการตรวจจับเหตุการณ์ที่เป็น Positive จริง</p>
+                            <div class="formula">Recall = TP / (TP + FN)</div>
+                        </div>
+                        <div class="metric-item">
+                            <h4>F1 Score</h4>
+                            <p>ค่าเฉลี่ยแบบสมดุลระหว่าง Precision และ Recall</p>
+                            <div class="formula">F1 Score = 2 × (Precision × Recall) / (Precision + Recall)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hands-on">
+                    <h3>4. กิจกรรมกลุ่ม (Hands-on II)</h3>
+                    <div class="activity-card">
+                        <h4>หัวข้อ: จำแนกขยะด้วย AI: ฝึกสอนโมเดลและวัดผลด้วย Confusion Matrix</h4>
+                        <p>ผู้เข้าอบรมจะทำการฝึกสอนโมเดลจำแนกประเภทขยะ และใช้ Google Sheets เพื่อวิเคราะห์ประสิทธิภาพของโมเดลจากผลลัพธ์ของ Confusion Matrix ที่ได้</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="downloads" class="section downloads">
+            <div class="container">
+                <h2>🔗 ดาวน์โหลดเอกสารและไฟล์กิจกรรม</h2>
+                <p>สามารถดาวน์โหลดไฟล์ที่เกี่ยวข้องได้จากลิงก์ด้านล่างนี้:</p>
+                
+                <div class="download-card">
+                    <h3>Google Drive Folder (ไฟล์กิจกรรม)</h3>
+                    <a href="https://drive.google.com/drive/folders/1qG6sCgbwnOkKEdW3rNiPBiL33DjI2-Ke?usp=sharing" target="_blank" class="download-link">
+                        เข้าถึงไฟล์กิจกรรม
+                    </a>
+                    <div class="file-list">
+                        <h4>ไฟล์ที่เกี่ยวข้อง:</h4>
+                        <ul>
+                            <li>ตัวอย่างรูปผัก-ผลไม้</li>
+                            <li>สมุดบันทึกผลงาน</li>
+                            <li>template_ConfusionMatrix_Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2568 การอบรมเชิงปฏิบัติการ: Machine Learning และการประเมินโมเดล</p>
+            <p>โครงการวิทยาศาสตร์พลังสิบ ระดับชั้นมัธยมศึกษาตอนปลาย</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
